@@ -2,6 +2,9 @@
 
 Chaque prospect a sa propre URL de démo.
 
+> **WORKFLOW SOP - Mode d'emploi complet :** [SOP/instructions.md](SOP/instructions.md)
+
+
 ## Sites en ligne
 
 | Prospect | URL |
@@ -21,9 +24,12 @@ Chaque prospect a sa propre URL de démo.
 ```
 tenizintsultrim31.github.io/
 ├── README.md
+├── SOP/
+│   └── instructions.md    # Mode d'emploi complet (WORKFLOW SOP)
+├── template/
+│   └── index.html         # Template vierge à dupliquer
 ├── elite-auto-detail/
-│   └── index.html
-├── prochain-prospect/
-│   └── index.html
-└── ...
+│   └── index.html         # Site de démo - Elite Auto Detail
+└── prochain-prospect/
+    └── index.html         # Prochain prospect à ajouter
 ```
