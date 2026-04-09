@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Puig - Plombier Chauffagiste à Toulouse</title>
+    <meta name="description" content="Daniel Puig, plombier chauffagiste à Toulouse. Plus de 25 ans d'expérience. Dépannage, installation, entretien de chaudières et plomberie. 5 étoiles, 73 avis.">
+    <style>
+        :root {
+            --primary: #0066cc;
+            --secondary: #004499;
+            --accent: #ff6600;
+            --light: #f5f9ff;
+            --dark: #1a1a2e;
+            --text: #333;
+            --white: #ffffff;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=1920&h=600&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        .hero .badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: var(--accent);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,102,0,0.4);
+        }
+        section {
+            padding: 80px 0;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+        .about {
+            background: var(--light);
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .stat {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        .stat-label {
+            color: #666;
+        }
+        .services {
+            background: var(--white);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .contact {
+            background: var(--dark);
+            color: var(--white);
+        }
+        .contact h2 {
+            color: var(--white);
+        }
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .contact-item span {
+            font-size: 1.5rem;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        .contact-form button {
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+        footer {
+            background: #0d0d1a;
+            color: #888;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Daniel Puig</div>
+                <ul class="nav-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="badges">
+                <span class="badge">5 étoiles</span>
+                <span class="badge">73 avis</span>
+                <span class="badge">25+ ans d'expérience</span>
+            </div>
+            <h1>Daniel Puig</h1>
+            <p>Plombier Chauffagiste à Toulouse<br>Professionnel Gaz Naturel Agréé</p>
+            <a href="#contact" class="btn">Demander un devis gratuit</a>
+        </div>
+    </section>
+
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2>À propos de Daniel Puig</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Votre artisan de confiance à Toulouse</h3>
+                    <p>Fort de plus de 25 ans d'expérience dans la plomberie et le chauffage, Daniel Puig met son savoir-faire au service des particuliers et des professionnels de Toulouse et ses environs.</p>
+                    <p>Spécialiste du remplacement de chaudières à gaz toutes marques, il dispose de l'agrément Professionnel Gaz Naturel. Il réalise la pose, l'installation, la réparation, l'entretien et la mise en service d'appareils de chauffage et de climatisation.</p>
+                    <p>Reconnu pour son professionnalisme, sa rapidité et sa réactivité, Daniel Puig intervient pour tous vos travaux de plomberie : dégâts des eaux, mise aux normes des canalisations, désengorgement, raccordement de réseau d'eau, maintenance et rénovation de vos installations.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Années d'expérience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5.0</div>
+                        <div class="stat-label">Note moyenne</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">73</div>
+                        <div class="stat-label">Avis clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Plomberie générale</h3>
+                    <p>Tous travaux de plomberie, réparation de robinetterie, installation de sanitaires, rénovation de salle de bain.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔥</div>
+                    <h3>Chauffage & Chaudières</h3>
+                    <p>Installation, remplacement et entretien de chaudières à gaz toutes marques. Agrément Professionnel Gaz Naturel.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Dégâts des eaux</h3>
+                    <p>Intervention rapide pour fuites, recherche de fuites, réparation de canalisations et mise aux normes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚿</div>
+                    <h3>Installation de sanitaires</h3>
+                    <p>Pose de machines à laver, remplacement de robinets, installation de cabines de douche et baignoires.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">❄️</div>
+                    <h3>Climatisation</h3>
+                    <p>Installation, entretien et dépannage de systèmes de climatisation pour particuliers et professionnels.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Mise aux normes</h3>
+                    <p>Mise aux normes des installations à gaz et des canalisations. Devis et déplacements gratuits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Daniel Puig</h3>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>26 rue Alençon, 31400 Toulouse</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>⏰</span>
+                        <span>Lundi à Vendredi : 08h00 - 18h00</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>⭐</span>
+                        <span>5 étoiles - 73 avis clients</span>
+                    </div>
+                    <p style="margin-top: 2rem; opacity: 0.9;">Devis gratuit et déplacement offert pour tous vos travaux de plomberie et chauffage à Toulouse et alentours.</p>
+                </div>
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('Merci pour votre message ! Nous vous recontacterons dans les plus brefs délais.');">
+                        <input type="text" placeholder="Votre nom" required>
+                        <input type="email" placeholder="Votre email" required>
+                        <input type="tel" placeholder="Votre téléphone">
+                        <textarea placeholder="Décrivez votre projet ou votre besoin..."></textarea>
+                        <button type="submit">Envoyer ma demande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Daniel Puig - Plombier Chauffagiste à Toulouse</p>
+            <p>26 rue Alençon, 31400 Toulouse</p>
+        </div>
+    </footer>
+</body>
+</html>
