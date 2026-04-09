@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MODIFIER : titre du site -->
+    <title>[NOM ENTREPRISE] - [SERVICE] à [VILLE]</title>
+    <meta name="description" content="[DESCRIPTION META]">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- HERO SECTION -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+        <!-- MODIFIER : URL image Unsplash pertinente -->
+        <img src="[URL IMAGE UNSPLASH]" alt="[ALT IMAGE]" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative z-20 text-center px-4">
+            <!-- MODIFIER : nom entreprise, service, ville -->
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">[NOM ENTREPRISE]</h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-6">[SERVICE] - [VILLE]</p>
+            <!-- MODIFIER : texte de présentation -->
+            <p class="text-lg text-gray-400 mb-8">[TEXTE PRESENTATION]</p>
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg transition">[TEXTE CTA]</a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="py-20 px-4 bg-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nos Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- MODIFIER : chaque service -->
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">[SERVICE 1]</h3>
+                    <p class="text-gray-400">[DESCRIPTION SERVICE 1]</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">[SERVICE 2]</h3>
+                    <p class="text-gray-400">[DESCRIPTION SERVICE 2]</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-3">[SERVICE 3]</h3>
+                    <p class="text-gray-400">[DESCRIPTION SERVICE 3]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Contactez-nous</h2>
+            <!-- MODIFIER : infos de contact -->
+            <p class="text-xl text-gray-400 mb-8">[TEXTE CONTACT]</p>
+            <p class="text-lg text-gray-400 mb-4">🌐 [SITE WEB]</p>
+            <p class="text-lg text-gray-400">📍 [LOCALISATION]</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-4 bg-gray-800 text-center text-gray-400">
+        <p>&copy; 2025 [NOM ENTREPRISE]. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
